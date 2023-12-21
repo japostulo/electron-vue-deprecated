@@ -1,7 +1,7 @@
 {
   "name": "karaoke",
   "private": true,
-  "version": "0.0.0",
+  "version": "2.0.0",
   "main": "dist/electron/main/main.js",
   "scripts": {
     "vite:dev": "vite",
@@ -9,7 +9,7 @@
     "vite:preview": "vite preview",
     "lint": "eslint -c .eslintrc --ext .ts ./src",
     "serve": "tsc && concurrently vite \" electron .\" \"tsc -w\"",
-    "build": "npm run vite:build && tsc && electron-builder"
+    "build": "npm run vite:build && tsc && electron-builder --windows"
   },
   "dependencies": {
     "vue": "^3.2.47",

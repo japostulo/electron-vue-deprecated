@@ -1,20 +1,26 @@
 appId: Karaoke
-asar: true
+asar: false
+productName: karaoke
+
+electronLanguages:
+  - 'pt-BR'
+
 directories:
   buildResources: assets
   output: release/${version}
 files:
   - dist
 mac:
-  artifactName: "${productName}_${version}.${ext}"
+  artifactName: '${productName}_${version}.${ext}'
   target:
     - dmg
 win:
+  icon: 'src/assets/wal.ico'
   target:
     - target: nsis
       arch:
         - x64
-  artifactName: "${productName}_${version}.${ext}"
+  artifactName: 'karaoke ${version}.${ext}'
 nsis:
   oneClick: false
   perMachine: false
